@@ -46,7 +46,24 @@ app.get('/weather',(req,res)=>{
         forecast : 'It is snowing',
         location : 'vijayawada'
     });
-})
+});
+
+app.get('/help/*',(req,res)=>{
+    res.render('404',{
+        title : 'Help Page',
+        name : 'Sumanth',
+        errormsg : 'Help content not found'
+    });
+});
+
+app.get('/*',(req,res)=>{
+    res.render('404',{
+        title : '404 Page',
+        name : 'Sumanth',
+        errormsg : 'Page not found'
+    });
+});
+
 app.listen(3000,()=>{
     console.log("server is up and running!..");
 });
