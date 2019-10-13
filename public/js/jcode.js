@@ -1,0 +1,1 @@
+console.log('Client side scripting is loaded into browser');
