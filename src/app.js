@@ -5,7 +5,7 @@ const forecast = require('./utils/forecast');
 const geocode = require('./utils/geocode');
 
 const app = express();
-
+const port = process.env.PORT || 3000;
 //defining paths
 // to fix absolute path for folder "public" where the static content is loaded
 //defining default views path to another
@@ -84,6 +84,6 @@ app.get('/*',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{
-    console.log("server is up and running!..");
+app.listen(port,()=>{
+    console.log("server is up and running!.."+ port);
 });
