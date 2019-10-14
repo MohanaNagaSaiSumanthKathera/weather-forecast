@@ -2,14 +2,22 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
-    <script src="/js/jcode.js"></script>
+   
 </head>
 <body>
     <div class="forflex">
-        {{>header}}
-        <img src="/img/sumanth.jpg">    
+        {{>header}}  
+        <p>Use this site to get weather forecast</p>
+        <form>
+            <input type="text" placeholder="Location"/>
+            <button>Search</button>
+        </form>
+        <br/>
+        <p id="mess1"></p>
+        <p id="mess2"></p>
     </div>
     
     {{>footer}}
+     <script src="/js/jcode.js"></script>
 </body>
 </html>
